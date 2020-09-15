@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.StyleSheets;
 
+[assembly: InternalsVisibleTo("Markup")]
+[assembly: InternalsVisibleTo("Markup.UnitTests")]
 [assembly: InternalsVisibleTo("iOSUnitTests")]
 [assembly: InternalsVisibleTo("Xamarin.Forms.Controls")]
 [assembly: InternalsVisibleTo("Xamarin.Forms.Core.Design")]

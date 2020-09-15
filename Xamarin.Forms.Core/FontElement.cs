@@ -2,7 +2,7 @@ using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms
 {
-	static class FontElement
+	internal static class FontElement
 	{
 		public static readonly BindableProperty FontProperty =
 			BindableProperty.Create("Font", typeof(Font), typeof(IFontElement), default(Font),

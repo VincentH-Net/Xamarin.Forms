@@ -11,8 +11,11 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Remove="Internals\Legacy\**" />
+		<Compile Remove="Markup\**" />
 		<EmbeddedResource Remove="Internals\Legacy\**" />
+		<EmbeddedResource Remove="Markup\**" />
 		<None Remove="Internals\Legacy\**" />
+		<None Remove="Markup\**" />
 	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
 		<Compile Include="Internals\Legacy\**" />

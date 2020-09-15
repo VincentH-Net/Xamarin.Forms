@@ -516,7 +516,7 @@ namespace Xamarin.Forms
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		BindablePropertyContext GetContext(BindableProperty property) => _properties.TryGetValue(property, out var result) ? result : null;
+		internal BindablePropertyContext GetContext(BindableProperty property) => _properties.TryGetValue(property, out var result) ? result : null;
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		BindablePropertyContext GetOrCreateContext(BindableProperty property) => GetContext(property) ?? CreateAndAddContext(property);
@@ -561,7 +561,7 @@ namespace Xamarin.Forms
 		}
 
 		[Flags]
-		enum BindableContextAttributes
+		internal enum BindableContextAttributes
 		{
 			IsManuallySet = 1 << 0,
 			IsBeingSet = 1 << 1,
@@ -571,7 +571,7 @@ namespace Xamarin.Forms
 			IsDefaultValueCreated = 1 << 5,
 		}
 
-		class BindablePropertyContext
+		internal class BindablePropertyContext
 		{
 			public BindableContextAttributes Attributes;
 			public BindingBase Binding;
@@ -592,7 +592,7 @@ namespace Xamarin.Forms
 			Default = CheckAccess
 		}
 
-		class SetValueArgs
+		internal class SetValueArgs
 		{
 			public readonly SetValueFlags Attributes;
 			public readonly BindablePropertyContext Context;

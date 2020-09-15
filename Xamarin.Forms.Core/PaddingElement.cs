@@ -1,6 +1,6 @@
 ﻿namespace Xamarin.Forms
 {
-	static class PaddingElement
+	internal static class PaddingElement
 	{
 		public static readonly BindableProperty PaddingProperty =
 			BindableProperty.Create(nameof(IPaddingElement.Padding), typeof(Thickness), typeof(IPaddingElement), default(Thickness),
